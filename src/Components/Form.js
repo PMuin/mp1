@@ -22,11 +22,8 @@ class Form extends Component {
         <h1>Form {this.props.data} </h1>
         <form> 
             <InputElement label='Username' type='text' value={user.name}/>
-            <InputElement label='Password' type="text" value={user.password}/>
-          
-          <label>Password</label>
-          <input type="password" />
-          <button type="submit">Submit</button>
+            <InputElement label='Password' type="password" value={user.password}/>
+            <button type="submit">Submit</button>
         </form>
         <p>{'message:' + message}</p>
         <p>{user.username}</p>
