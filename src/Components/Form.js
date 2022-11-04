@@ -17,15 +17,22 @@ class Form extends Component {
         } else {
             message = "Not Ok"
         }
+
+        let user={
+            name: "Patri",
+            password: "1234"
+        }
+
     return (
       <div>
         <h1>Form {this.props.data} </h1>
         <form> 
-            <InputElement label='Username' type='text' value={user.name}/>
-            <InputElement label='Password' type="password" value={user.password}/>
-            <button type="submit">Submit</button>
+            <InputElement label="Username" type="text" value={user.name}/>
+            <InputElement label="Password" type="password" value={user.password}/>
+
+                {this.props.children}
         </form>
-        <p>{'message:' + message}</p>
+        <p>{'Message:' + message}</p>
         <p>{user.username}</p>
       </div>
     );
