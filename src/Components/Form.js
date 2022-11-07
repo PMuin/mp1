@@ -19,16 +19,18 @@ class Form extends Component {
         }
 
         let user={
-            name: "Patri",
-            password: "1234"
+            name:"Patri",
+            password:"1234"
         }
+        const {classForm ,...rest}=this.props
 
+        
     return (
       <div>
         <h1>Form {this.props.data} </h1>
-        <form> 
-            <InputElement label="Username" type="text" value={user.name}/>
-            <InputElement label="Password" type="password" value={user.password}/>
+        <form className={classForm}> 
+            <InputElement label="Username" type="text" value={user.name} classProp={...this.rest}/>
+            <InputElement label="Password" type="password" value={user.password} classProp={...this.rest}/>
 
                 {this.props.children}
         </form>
